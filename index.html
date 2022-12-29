@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div class="calculator">
+        <div id="small_screen">0</div>
+        <div id="screen">0</div>
+        <div class="keys">
+            <div class="line">
+                <button class="btn number"  onclick="func_ce()">CE</button>
+                <button class="btn number"  onclick="func_c()">C</button>
+                <button class="btn number"  onclick="del()">DEL</button>
+                <button class="btn operator" value="/" onclick="operacao(event)">/</button>
+            </div>
+            <div class="line">
+                <button class="btn number" value="7" onclick="print(event)">7</button>
+                <button class="btn number" value="8" onclick="print(event)">8</button>
+                <button class="btn number" value="9" onclick="print(event)">9</button>
+                <button class="btn operator" value="*" onclick="operacao(event)">x</button>
+            </div>
+            <div class="line">
+                <button class="btn number" value="4" onclick="print(event)">4</button>
+                <button class="btn number" value="5" onclick="print(event)">5</button>
+                <button class="btn number" value="6" onclick="print(event)">6</button>
+                <button class="btn operator" value="-" onclick="operacao(event)">-</button>
+            </div>
+            <div class="line">
+                <button class="btn number" value="1" onclick="print(event)">1</button>
+                <button class="btn number" value="2" onclick="print(event)">2</button>
+                <button class="btn number" value="3" onclick="print(event)">3</button>
+                <button class="btn operator" value="+" onclick="operacao(event)">+</button>
+            </div>
+            <div class="line">
+                <button class="btn number" value="0" onclick="print(event)">0</button>
+                <button class="btn number" value="," onclick="print(event)">.</button>
+                <button class="btn_equal operator" value="=" onclick="operacao(event)">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
