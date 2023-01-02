@@ -10,10 +10,12 @@ body{
     margin: 0 auto;
     background-color: black;
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:right;
+    padding-right: 5px;
+    box-sizing: border-box;
 }
 
 
@@ -21,12 +23,14 @@ body{
     width: 300px;
     height: 50px;
     margin: 0 auto;
-    background-color: gray;
+    background-color: black;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
+    padding-right: 5px;
+    box-sizing: border-box;
 }
 
 .calculator{
@@ -65,9 +69,16 @@ body{
     cursor: pointer;
 }
 
-
 .keys{
     width: 300px;
     background-color: grey;
     margin: 0 auto;
+}
+
+.operator:hover{
+    background-color: orangered;
+}
+
+.number:hover{
+    background-color: aqua;
 }

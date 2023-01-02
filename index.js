@@ -4,14 +4,30 @@ const small_screen = document.getElementById('small_screen')
 let n1 = '';
 let n2 = '';
 let operator = '';
-
+let has_point = false;
 
 
 function print(e){
-    if(screen.innerText === '0'){
-        screen.innerText = ''
+    if(screen.innerText.length < 16){
+        if(screen.innerText === '0'){
+            screen.innerText = ''
+        }
+        if(has_point){
+            if(e.target.value === '.'){
+                return
+            }   
+        }
+        if(e.target.value === '.'){
+            has_point = true
+        }
+        screen.innerText += e.target.value;
+        monitoring_size()
     }
-    screen.innerText += e.target.value;
+}
+
+function monitoring_size(){
+    if(screen.innerText.length > 11 && screen.innerText.length < 16){
+        screen.style.fontSize = "2rem"; }
 }
 
 function operacao(e){
@@ -28,16 +44,22 @@ function operacao(e){
         small_screen.innerText += operator;
         screen.innerText = 0;
     }else if(e.target.value === '='){
-        n1 = (+small_screen.innerText.slice(0,-1));
-        n2 = (+screen.innerText);
-        operator = small_screen.innerText.slice(-1);
-        small_screen.innerText = calculate(n1, n2, operator);
-        screen.innerText = small_screen.innerText;
+        button_equal(n1, n2, operator)
     }
 }
 
+function button_equal(n1, n2, operator){
+    n1 = (+small_screen.innerText.slice(0,-1));
+    n2 = (+screen.innerText);
+    operator = small_screen.innerText.slice(-1);
+    small_screen.innerText = calculate(n1, n2, operator);
+    screen.innerText = small_screen.innerText;
+}
+
 function calculate(n1, n2, operator){
+    let result = ''
     if(operator === '+'){
+        result = n1+n2
         return n1+n2;
     }
     if(operator === '-'){
@@ -67,3 +89,10 @@ function func_c(){
     operator = ''
 }
 
+function func_ce(){
+    if(screen.innerText === small_screen.innerText){
+        func_c()
+        return
+    }
+    screen.innerText = 0;
+}

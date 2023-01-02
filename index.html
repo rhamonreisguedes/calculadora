@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculadora</h1>
+    <h1>CALCULADORA</h1>
     <div class="calculator">
         <div id="small_screen">0</div>
         <div id="screen">0</div>
         <div class="keys">
             <div class="line">
-                <button class="btn number"  onclick="func_ce()">CE</button>
-                <button class="btn number"  onclick="func_c()">C</button>
-                <button class="btn number"  onclick="del()">DEL</button>
+                <button class="btn operator"  onclick="func_ce()">CE</button>
+                <button class="btn operator"  onclick="func_c()">C</button>
+                <button class="btn operator"  onclick="del()">DEL</button>
                 <button class="btn operator" value="/" onclick="operacao(event)">/</button>
             </div>
             <div class="line">
                 <button class="btn number" value="7" onclick="print(event)">7</button>
                 <button class="btn number" value="8" onclick="print(event)">8</button>
                 <button class="btn number" value="9" onclick="print(event)">9</button>
-                <button class="btn operator" value="*" onclick="operacao(event)">x</button>
+                <button class="btn operator" value="*" onclick="operacao(event)">*</button>
             </div>
             <div class="line">
                 <button class="btn number" value="4" onclick="print(event)">4</button>
@@ -39,7 +39,7 @@
             </div>
             <div class="line">
                 <button class="btn number" value="0" onclick="print(event)">0</button>
-                <button class="btn number" value="," onclick="print(event)">.</button>
+                <button class="btn number" value="." onclick="print(event)">.</button>
                 <button class="btn_equal operator" value="=" onclick="operacao(event)">=</button>
             </div>
         </div>
