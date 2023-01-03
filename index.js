@@ -4,7 +4,7 @@ const small_screen = document.getElementById('small_screen')
 let n1 = '';
 let n2 = '';
 let operator = '';
-let has_point = false;
+// let button_equal_pressed = false;
 
 
 function print(e){
@@ -12,13 +12,8 @@ function print(e){
         if(screen.innerText === '0'){
             screen.innerText = ''
         }
-        if(has_point){
-            if(e.target.value === '.'){
-                return
-            }   
-        }
-        if(e.target.value === '.'){
-            has_point = true
+        if(e.target.value === '.' && screen.innerText.indexOf('.') > -1){
+            return
         }
         screen.innerText += e.target.value;
         monitoring_size()
@@ -86,7 +81,8 @@ function del(){
 function func_c(){
     screen.innerText = 0;
     small_screen.innerText = 0;
-    operator = ''
+    operator = '';
+    has_point = false;
 }
 
 function func_ce(){

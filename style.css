@@ -31,6 +31,8 @@ body{
     justify-content: right;
     padding-right: 5px;
     box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .calculator{
@@ -49,7 +51,7 @@ body{
     margin: 10px;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 1px;
+    border-radius: 5px;
 }
 
 .btn_equal{
@@ -58,7 +60,7 @@ body{
     margin: 10px;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 1px;
+    border-radius: 5px;
 }
 
 .btn:hover{
@@ -73,6 +75,10 @@ body{
     width: 300px;
     background-color: grey;
     margin: 0 auto;
+    border: 1px black solid;
+    box-sizing: border-box;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .operator:hover{
