@@ -54,7 +54,7 @@ body{
     border-radius: 5px;
 }
 
-.btn_equal{
+#btn_equal{
     width: 120px;
     height: 50px;
     margin: 10px;
